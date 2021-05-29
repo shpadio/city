@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Square() {
+const Square = ({ square }):React.ReactElement => (
+  <>
+    <p>{square}</p>
+  </>
 
-    return (
-        <div>Square</div>
-    );
-}
+);
 
 export default Square;
