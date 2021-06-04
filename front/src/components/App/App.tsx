@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
-import Board from '../Board/Board';
+import React from "react";
+import "./App.module.css";
+import Board from "../Board/Board";
+import styles from "./App.module.css";
 
 function App() {
   return (
-
     <>
-      <Board />
+      <div className={styles.main}>
+        <Board />
+      </div>
     </>
-
   );
 }
 

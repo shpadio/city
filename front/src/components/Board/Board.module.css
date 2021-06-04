@@ -1,0 +1,7 @@
+.board {
+    max-height: 500px;
+    max-width: 525px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
