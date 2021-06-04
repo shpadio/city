@@ -22,17 +22,11 @@
     "rules": {
         "no-use-before-define": "off",
         "react/no-unused-prop-types": "off",
+        "react/require-default-props": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
         "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
-        "import/extensions": [
-            "error",
-            "ignorePackages",
-            {
-                "ts": "never",
-                "tsx": "never"
-            }
-        ]
+        "import/extensions": "off"
     }
 }
