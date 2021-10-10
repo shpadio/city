@@ -1,9 +1,9 @@
 import React from 'react';
 
 export interface AssetProps {
-    title:String,
-    logo:String,
-    price?:Number,
+    title: string,
+    logo: string,
+    price: number,
 }
 export const Asset = (props : AssetProps):React.ReactElement => (
   <>

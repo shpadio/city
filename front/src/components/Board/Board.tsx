@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, {memo, useState} from "react";
 
 import Square from "./Square/Square";
 import { AssetProps } from "../Assets/Asset";
@@ -9,14 +9,15 @@ export interface SquareState {
   x: number;
   y: number;
   isEmpty: boolean;
-  asset?: AssetProps;
+  asset: AssetProps;
 }
 function Board() {
-  const squaresState = createBoard(5, 5);
+  // const squaresState = createBoard(5, 5);
+  const [squaresState,setSquaresState] = useState(createBoard(2, 2))
   return (
     <>
       <div className={styles.board}>
-        <Square squareState={squaresState} />
+        <Square squareState={squaresState} setSquaresState={setSquaresState} />
       </div>
     </>
   );
