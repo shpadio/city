@@ -12,7 +12,8 @@ const OptionsDropdown = ({ squaresState,setSquaresState,coordinates }: OptionsDr
     const assetOptions:string[] = [
         'factory',
         'house',
-        'park'
+        'park',
+        'empty'
     ]
 
     const [assetOption,setSelectedOption] = useState('')
