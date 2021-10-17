@@ -1,4 +1,4 @@
-import { SquareState } from "./Board";
+import { SquareState } from "../Board";
 
 export function createBoard(countX: number, countY: number): SquareState[] {
   const board = [];

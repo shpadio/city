@@ -2,7 +2,7 @@ import React, {memo, useState} from "react";
 
 import Square from "./Square/Square";
 import { AssetProps } from "../Assets/Asset";
-import { createBoard } from "./functions";
+import { createBoard } from "./utils/functions";
 import styles from "./Board.module.css";
 
 export interface SquareState {
