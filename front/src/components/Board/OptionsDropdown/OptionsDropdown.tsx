@@ -8,7 +8,7 @@ interface OptionsDropdownProps {
     coordinates:Partial<SquareState>;
 }
 
-const OptionsDropdown = ({ squaresState,setSquaresState,coordinates }: OptionsDropdownProps) => {
+const OptionsDropdown = ({ squaresState, setSquaresState, coordinates }: OptionsDropdownProps) => {
     const assetOptions:string[] = [
         'factory',
         'house',
@@ -17,18 +17,16 @@ const OptionsDropdown = ({ squaresState,setSquaresState,coordinates }: OptionsDr
     ]
 
     const [assetOption,setSelectedOption] = useState('')
-    const handleChange = (e:any) => {
 
+    const handleChange = (e: any) => {
         const currentSquare = squaresState.find((square) => square.y === coordinates.y && square.x === coordinates.x )
-        console.log(currentSquare,'current')
+    
         if(currentSquare) {
-            // const index = squaresState.findIndex(currentSquare)
+            const index = squaresState.findIndex((el) => el.asset.title = currentSquare.asset.title)
             currentSquare.isEmpty = false
             currentSquare.asset.title = e.target.value
             setSelectedOption(e.target.value)
-            const newSquaresState = squaresState.splice(1,1,currentSquare)
-            console.log(newSquaresState,'new state!')
-            setSquaresState(newSquaresState)
+            squaresState[index] = currentSquare
         }
     }
 
@@ -36,7 +34,7 @@ const OptionsDropdown = ({ squaresState,setSquaresState,coordinates }: OptionsDr
 
     return (
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">{assetOption}</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"

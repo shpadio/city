@@ -26,11 +26,14 @@ function Square({ squareState ,setSquaresState}: SquareStateProps) {
           className={styles.square}
           onClick={() => clickHandler(square)}
         >
-          {isDropdownVisible && <OptionsDropdown squaresState={squares} setSquaresState={setSquaresState} coordinates={coordinates}/>}
           <p>{square.x}</p>
           <p>{square.y}</p>
         </div>
       ))}
+         <div>
+         {isDropdownVisible && <OptionsDropdown squaresState={squares} setSquaresState={setSquaresState} coordinates={coordinates}/>}
+           </div>
+
     </>
   );
 }
