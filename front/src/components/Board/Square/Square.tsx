@@ -28,6 +28,8 @@ function Square({ squareState ,setSquaresState}: SquareStateProps) {
         >
           <p>{square.x}</p>
           <p>{square.y}</p>
+          <p>{square.asset.title}</p>
+
         </div>
       ))}
          <div>

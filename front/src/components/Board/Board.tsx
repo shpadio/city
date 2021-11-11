@@ -13,7 +13,7 @@ export interface SquareState {
 }
 function Board() {
   // const squaresState = createBoard(5, 5);
-  const [squaresState,setSquaresState] = useState(createBoard(2, 2))
+  const [squaresState,setSquaresState] = useState(createBoard(5, 5))
   return (
     <>
       <div className={styles.board}>
